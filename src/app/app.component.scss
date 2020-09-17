@@ -1,0 +1,71 @@
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+
+  h2 {
+    font-family: 'Ranchers', cursive;
+    text-align: center;
+    font-size: 2rem;
+    color: #c8dcfc;
+    text-shadow: 2px 2px 2px #7186a7;
+  }
+
+  button {
+    background-color: #c8dcfc;
+    border: none;
+    border-radius: 4px;
+    width: 100px;
+    outline: none;
+    box-shadow: 2px 2px 2px #7186a7;
+    padding: 6px 0;
+
+    &:active {
+      box-shadow: inset 2px 2px 2px #7186a7;
+      padding: 5px 0 7px 2px;
+    }
+  }
+
+  .new-entry, .entries-list {
+    border: 1px solid #7186a7;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 25px;
+    min-width: 500px;
+  }
+
+  .new-entry {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        width: 300px;
+        padding: 5px;
+        margin: 5px 5px 5px 0;
+      }
+    }
+  }
+
+  .entries-list {
+
+    .tasks {
+      display: flex;
+
+      .task {
+        width: 300px;
+      }
+
+      button {
+        align-self: center;
+      }
+    }
+  }
+
+}
+
+
+

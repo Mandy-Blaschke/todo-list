@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'todo';
+
+  tasks = ['Milch'];
+  newTask: string;
+
+  addTask(): void {
+    this.newTask !== undefined && this.newTask !== ' ' ? this.tasks.push(this.newTask) : alert('Keine Aufgabe eingetragen!');
+    this.tasks.sort((pre, curr) => pre.localeCompare(curr));
+    this.newTask = undefined;
+  }
+
+  removeTask(task): void {
+    this.tasks.splice(this.tasks.indexOf(task), 1);
+  }
+
 }
